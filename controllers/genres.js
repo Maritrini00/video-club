@@ -10,7 +10,7 @@ function list(req, res, next) {
 
 function index(req,res,next){ 
     const id =req.params.id;  
-    Genre.findByPk(id).then(object=> res.js(object)).catch(err => res.send(err));
+    Genre.findByPk(id).then(object=> res.json(object)).catch(err => res.send(err));
 }
 
 function create(req,res,next){

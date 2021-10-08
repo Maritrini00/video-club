@@ -8,7 +8,7 @@ function list(req, res, next) {
 
 function index(req,res,next){ 
     const id =req.params.id;  
-    Actor.findByPk(id).then(object=> res.js(object)).catch(err => res.send(err));
+    Actor.findByPk(id).then(object=> res.json(object)).catch(err => res.send(err));
 }
 
 function create(req,res,next){
